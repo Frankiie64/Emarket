@@ -38,11 +38,11 @@ namespace Emarket.Infrastructure.Persistence.Context
                 {                 
                     case EntityState.Modified:
                         entry.Entity.Creadted = DateTime.Now;
-                        entry.Entity.CreatedBy = user.Username;
+                        entry.Entity.CreatedBy = user.FirstName;
                         break;
                     case EntityState.Added:
                         entry.Entity.Creadted = DateTime.Now;
-                        entry.Entity.CreatedBy = user.Username;
+                        entry.Entity.CreatedBy = user.FirstName;
                         break;                
                 }
             }

@@ -39,7 +39,7 @@
             {
                 <a asp-controller="Home" asp-action="Details" asp-route-id="@item.Id" type="button" class="text-decoration-none col-3 mx-auto">
                     <div class="card mb-3 bg-transparent border-2 border-dark">
-                        <img src="@item.Urls[0]" class="card-img-top" alt="@item.Name">
+                        <img src="@item.Urls[0]" class="card-img-top" style="height:180px; width:auto;" alt="@item.Name">
                         <div class="card-body border-2 border-dark bg-transparent text-dark">
                             <h5 class="card-title">@item.Name  -   @item.CategoryName</h5>
                             <p class="card-text">@item.Description</p>

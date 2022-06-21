@@ -38,7 +38,8 @@ namespace Emarket.Core.Application.ViewModels.User
         public string Email { get; set; }
 
         [Required(ErrorMessage = "Este campo es obligatorio")]
-        [DataType(DataType.PhoneNumber)]
+        [DataType(DataType.PhoneNumber, ErrorMessage = "Numero invalido")]
+        [RegularExpression(@"^([0-9]{10})$", ErrorMessage = "Debe tener 10 caracteres sin guiones o parentesis.")]
         public string Phone { get; set; }
         public bool validateUser { get; set; } = false;
     }

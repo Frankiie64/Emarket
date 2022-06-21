@@ -12,7 +12,7 @@ namespace Emarket.Core.Application.ViewModels.Categories
         public int Id { get; set; }
         [Required (ErrorMessage ="Este campo es obligatorio")]
         public string Name { get; set; }
-        [Required(ErrorMessage = "Este campo es obligatorio")]
+        [Required(ErrorMessage = "Este campo es obligatorio"), MaxLength(215, ErrorMessage = "La descripcion no puede pasar de 215 caracteres")]
         public string Description { get; set; }
 
     }
