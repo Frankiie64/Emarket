@@ -94,7 +94,9 @@ namespace Emarket.WebApp.Controllers
                 vm.Categories = await _servicesCategory.GetAll();
                 return View("SaveAdVM",vm);
             }
+
             vm.Urls = new List<string>();
+
             SaveAdsVM ads = await _services.GetById(vm.Id);
 
            
@@ -106,6 +108,7 @@ namespace Emarket.WebApp.Controllers
             }
 
             int counter = ads.Urls.Count - 1;
+
             for (int i = counter; i >= 0 ; i--)
             {                        
                 if (string.IsNullOrEmpty(ads.Urls[i]))
